@@ -1216,6 +1216,10 @@ footer {
   color: var(--orange);
 }
 
+.rules-block--recommendations h2 {
+  color: var(--pink);
+}
+
 .rules-block--admin h2,
 .rules-block--admin .rules-admin-intro strong {
   color: var(--pink);
@@ -1261,7 +1265,10 @@ footer {
   background: var(--orange);
   box-shadow: 0 0 8px rgba(247, 148, 29, 0.5);
 }
-
+.rules-block--recommendations .rules-list > li::before {
+  background: var(--pink);
+  box-shadow: 0 0 8px rgba(233, 30, 140, 0.5);
+}
 .rules-block--admin .rules-list > li::before {
   background: var(--pink);
   box-shadow: 0 0 8px rgba(233, 30, 140, 0.5);
