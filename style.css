@@ -169,6 +169,7 @@ h3 {
 .btn-viber {
   background: linear-gradient(135deg, #7360f2, #8e7ff3);
   color: white;
+  min-width: 270px;
   box-shadow: 0 10px 30px rgba(115, 96, 242, 0.4);
 }
 
@@ -180,6 +181,7 @@ h3 {
 .btn-telegram {
   background: linear-gradient(135deg, #26a5e4, #45b8f0);
   color: white;
+  min-width: 270px;
   box-shadow: 0 10px 30px rgba(38, 165, 228, 0.4);
 }
 
