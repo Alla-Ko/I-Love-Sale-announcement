@@ -1,4 +1,17 @@
 User-agent: *
+Disallow:
+
+# Дозволяємо доступ ШІ-сканерам
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Anthropic-ai
 Allow: /
 
 Sitemap: https://ilovesale-anons.pages.dev/sitemap.xml
