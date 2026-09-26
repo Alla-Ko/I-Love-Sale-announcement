@@ -91,72 +91,159 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "I♡Sale Анонси",
-        "description": "Підписка на щоденні анонси з модними колажами одягу для баєрів та посередників",
-        "provider": {
-          "@type": "Organization",
-          "name": "I♡Sale",
-          "logo": "https://ilovesale-anons.pages.dev/images/1f3f1a98-7522-4e30-a609-f1410d22e1db.png",
-          "sameAs": ["https://t.me/I_Love_Sale_Anons"],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+380635632436",
-            "contactType": "customer service",
-            "availableLanguage": "Ukrainian"
-          }
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "Україна"
-        },
-        "offers": [
+        "@graph": [
           {
-            "@type": "Offer",
-            "name": "30 днів",
-            "price": "600",
-            "priceCurrency": "UAH",
-            "description": "Осінній абонемент на 30 днів"
+            "@type": "Organization",
+            "@id": "https://ilovesale-anons.pages.dev/#organization",
+            "name": "I♡Sale",
+            "alternateName": ["I❤Sale", "I Love Sale", "I❤Sale Анонси"],
+            "url": "https://ilovesale-anons.pages.dev/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://ilovesale-anons.pages.dev/images/1f3f1a98-7522-4e30-a609-f1410d22e1db.png"
+            },
+            "image": "https://ilovesale-anons.pages.dev/images/preview1.jpg",
+            "sameAs": [
+              "https://t.me/I_Love_Sale_Anons",
+              "https://t.me/Alla_ILoveSale"
+            ],
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+380635632436",
+                "contactType": "customer service",
+                "availableLanguage": ["uk", "Ukrainian"],
+                "areaServed": "UA"
+              }
+            ]
           },
           {
-            "@type": "Offer",
-            "name": "Для нових клієнтів",
-            "price": "500",
-            "priceCurrency": "UAH",
-            "description": "Абонемент на жовтень 600 грн"
-          }
-        ]
-      }
-    </script>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Що таке I♡Sale Анонси?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Це підписка на щоденні анонси з модними колажами одягу для баєрів та посередників через Viber та Telegram."
+            "@type": "WebSite",
+            "@id": "https://ilovesale-anons.pages.dev/#website",
+            "url": "https://ilovesale-anons.pages.dev/",
+            "name": "I♡Sale Анонси",
+            "description": "Підписка на щоденні анонси з модними колажами одягу для баєрів та посередників",
+            "inLanguage": "uk-UA",
+            "publisher": {
+              "@id": "https://ilovesale-anons.pages.dev/#organization"
             }
           },
           {
-            "@type": "Question",
-            "name": "Скільки коштує підписка?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "30 днів — 600 грн. Вся осінь — 1200 грн з промокодом ЖОВТЕНЬ2026."
-            }
+            "@type": "WebPage",
+            "@id": "https://ilovesale-anons.pages.dev/#webpage",
+            "url": "https://ilovesale-anons.pages.dev/",
+            "name": "I❤️Sale Анонси — Щоденні модні колажі для баєрів та посередників",
+            "description": "I❤️Sale — підписка на щоденні анонси з модними колажами одягу для баєрів та посередників. Абонементи від 600 грн. Viber та Telegram.",
+            "isPartOf": {
+              "@id": "https://ilovesale-anons.pages.dev/#website"
+            },
+            "about": {
+              "@id": "https://ilovesale-anons.pages.dev/#service"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://ilovesale-anons.pages.dev/images/preview1.jpg",
+              "width": 1200,
+              "height": 630
+            },
+            "inLanguage": "uk-UA"
           },
           {
-            "@type": "Question",
-            "name": "Як підписатися?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Приєднайтесь до гостьової групи Viber або Telegram, щоб побачити приклади контенту, а потім оформіть підписку."
-            }
+            "@type": "Service",
+            "@id": "https://ilovesale-anons.pages.dev/#service",
+            "name": "I♡Sale Анонси",
+            "serviceType": "Підписка на модні анонси для баєрів",
+            "description": "Щоденні анонси з модними колажами одягу з іноземних сайтів для баєрів та посередників у Viber і Telegram",
+            "provider": {
+              "@id": "https://ilovesale-anons.pages.dev/#organization"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Україна"
+            },
+            "availableChannel": [
+              {
+                "@type": "ServiceChannel",
+                "name": "Viber",
+                "serviceUrl": "https://invite.viber.com/?g2=AQB6dEBKz4QoXExw6ctvapJ0L8Q7IdTngU%2FBvGs6jvdFVOyIxq9JSd%2B2tiX2Swg%2F"
+              },
+              {
+                "@type": "ServiceChannel",
+                "name": "Telegram",
+                "serviceUrl": "https://t.me/I_Love_Sale_Anons"
+              }
+            ],
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "30 днів",
+                "price": "600",
+                "priceCurrency": "UAH",
+                "description": "Абонемент на 30 днів. Можна почати з будь-якого дня місяця",
+                "availability": "https://schema.org/InStock",
+                "url": "https://ilovesale-anons.pages.dev/#pricing"
+              },
+              {
+                "@type": "Offer",
+                "name": "Осінь",
+                "price": "1300",
+                "priceCurrency": "UAH",
+                "description": "Абонемент на осінь. Вересневі анонси в подарунок",
+                "availability": "https://schema.org/InStock",
+                "url": "https://ilovesale-anons.pages.dev/#pricing"
+              },
+              {
+                "@type": "Offer",
+                "name": "Осінь (для нових клієнтів)",
+                "price": "1200",
+                "priceCurrency": "UAH",
+                "description": "З промокодом ЖОВТЕНЬ2026 — 1200 грн замість 1300. Доступ до кінця осені, вересневі анонси в подарунок",
+                "availability": "https://schema.org/InStock",
+                "url": "https://ilovesale-anons.pages.dev/#pricing",
+                "priceValidUntil": "2026-10-01"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://ilovesale-anons.pages.dev/#faq",
+            "isPartOf": {
+              "@id": "https://ilovesale-anons.pages.dev/#webpage"
+            },
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Що таке I♡Sale Анонси?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Це підписка на щоденні анонси з модними колажами одягу для баєрів та посередників через Viber та Telegram."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Скільки коштує підписка?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "30 днів — 600 грн. Осінь — 1300 грн. Для нових клієнтів з промокодом ЖОВТЕНЬ2026 — 1200 грн."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Як підписатися?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Приєднайтесь до гостьової групи Viber або Telegram, щоб побачити приклади контенту, а потім оформіть підписку через адміністраторів."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Чи можна передавати анонси іншим посередникам?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ні. Передавати анонси I❤Sale іншим посередникам заборонено. Деталі — у правилах участі: https://ilovesale-anons.pages.dev/pravyla"
+                }
+              }
+            ]
           }
         ]
       }
