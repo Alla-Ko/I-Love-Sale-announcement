@@ -456,6 +456,10 @@ h3 {
   position: relative;
   display: inline-block;
 }
+.diagonal-strike-dark {
+  position: relative;
+  display: inline-block;
+}
 
 .diagonal-strike::after {
   content: "";
@@ -467,7 +471,16 @@ h3 {
   background: rgba(255, 255, 255, 0.8);
   transform: rotate(-12deg);
 }
-
+.diagonal-strike-dark::after {
+  content: "";
+  position: absolute;
+  left: -5%;
+  top: 50%;
+  width: 110%;
+  height: 3px;
+  background: rgba(123, 45, 142);
+  transform: rotate(-12deg);
+}
 /* Diagonal Section */
 .diagonal-section {
   background: var(--light);
