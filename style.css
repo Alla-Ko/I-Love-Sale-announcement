@@ -686,15 +686,15 @@ h3 {
 .pricing-cards {
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
 .pricing-card {
-  width: 360px;
+  width: 100%;
   max-width: 100%;
+  min-width: 0;
   background: white;
   border-radius: 24px;
   padding: 2.5rem;
@@ -708,7 +708,6 @@ h3 {
 .pricing-card.featured {
   background: linear-gradient(135deg, var(--purple), var(--pink));
   color: white;
-  transform: scale(1.05);
 }
 
 .pricing-card.featured::before {
@@ -730,7 +729,7 @@ h3 {
 }
 
 .pricing-card.featured:hover {
-  transform: scale(1.05) translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .pricing-duration {
@@ -773,6 +772,152 @@ h3 {
 .pricing-card.featured .btn {
   background: white;
   color: var(--purple);
+}
+
+/* Telegram Bot Section */
+.bot-section {
+  background: linear-gradient(180deg, white 0%, var(--light) 100%);
+  padding: 2rem 2rem 6rem;
+  position: relative;
+}
+
+.bot-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--dark);
+  border-radius: 32px;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2.5rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.bot-card .floating-shapes .shape {
+  opacity: 0.2;
+}
+
+.bot-col,
+.bot-content {
+  position: relative;
+  z-index: 1;
+}
+
+.bot-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.bot-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bot-visual img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.35));
+}
+
+.bot-col .btn-telegram {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.bot-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--telegram), var(--blue));
+  color: white;
+  padding: 0.4rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.bot-content h2 {
+  font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+  color: white;
+  margin: 0 0 1rem;
+  line-height: 1.25;
+}
+
+.bot-lead {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 1rem;
+}
+
+.bot-content p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0 0 1rem;
+}
+
+.bot-content a:not(.btn) {
+  color: #7ad4ff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.bot-content a:not(.btn):hover {
+  text-decoration: underline;
+}
+
+.bot-gift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  width: fit-content;
+  max-width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 2px dashed rgba(255, 255, 255, 0.28);
+  border-radius: 16px;
+  padding: 1.1rem 1.35rem;
+  margin: 1.25rem auto;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.bot-gift-days {
+  font-family: "Comfortaa", cursive;
+  font-size: 1.9rem;
+  font-weight: 800;
+  line-height: 1.2;
+  background: linear-gradient(
+    90deg,
+    var(--pink),
+    var(--purple),
+    var(--blue),
+    var(--green),
+    var(--yellow),
+    var(--orange),
+    var(--pink)
+  );
+  background-size: 300% 100%;
+  animation: stickerNavBorder 4s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bot-thanks {
+  font-weight: 700;
+  color: white !important;
 }
 
 /* Contact Section */
@@ -1116,6 +1261,35 @@ footer {
   .contact-details {
     align-items: center;
   }
+
+  .bot-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2.25rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .bot-content {
+    order: 1;
+  }
+
+  .bot-col {
+    order: 2;
+  }
+
+  .bot-visual img {
+    max-width: 280px;
+  }
+
+  .bot-col .btn-telegram {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .pricing-cards {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1136,14 +1310,6 @@ footer {
   .diagonal-section {
     padding: 6rem 1.5rem 5rem;
     clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
-  }
-
-  .pricing-card.featured {
-    transform: scale(1);
-  }
-
-  .pricing-card.featured:hover {
-    transform: translateY(-10px);
   }
 
   .promo-box {
